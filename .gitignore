@@ -1,0 +1,6 @@
+visaenv
+.vscode
+visaproject/visapp/__pycache__
+visaproject/visapp/migrations/__pycache__
+visaproject/visaproject/__pycache__
+visaproject/visaproject/__pycache__
