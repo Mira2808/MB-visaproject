@@ -957,7 +957,9 @@ a:focus {
   margin-left: 100px;
   margin-right: 100px;
   margin-top: 70px;
-  margin-bottom: 70px;
+  margin-bottom: 70px; 
+  background-color: #7993e2;
+
 }
 /* registration */
 .regis{
@@ -967,4 +969,42 @@ a:focus {
 .regis.btn{
   background-color: blue;
   color: bisque;
+}
+/* singapore */
+.singapore{
+  text-align: center;
+  color: #ffffff;
+}
+
+.sin-title{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.sin-top-left{
+  position: absolute;
+  font-size: xx-large;
+  top: 8px;
+  left: 16px;
+}
+
+ .sin-info{
+  display: grid;
+  align-items: center; 
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
+}
+
+.sin-info-img{
+  max-width: 100%;
+  max-height:100%;
+}
+
+.sin-info-text{
+  color: white;
+  height: 400px;
+  width: 700px;
+  background: transparent;
+  backdrop-filter: blur(20px);
 }

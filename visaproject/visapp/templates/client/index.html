@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "client/base.html" %}
 {% load static %}
 
 {% block content %}
@@ -299,7 +299,7 @@
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
-          Contact Us
+          Inquiry Form
         </h2>
       </div>
       <div class="row">
@@ -311,17 +311,13 @@
                   <input type="text" class="form-control" placeholder="First Name" />
                 </div>
                 <div class="form-group col-md-6">
-                  <input type="text" class="form-control" placeholder="Last Name" />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-6">
                   <input type="email" class="form-control" placeholder="Email" />
                 </div>
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" placeholder="Phone Number" />
-                </div>
               </div>
+              <div class="form-group">
+                <input type="number" class="form-control" id="pnumber" placeholder="phone number">
+              </div>
+
               <div class="form-group ">
                 <input type="text" class="message-box" placeholder="Message" />
               </div>
