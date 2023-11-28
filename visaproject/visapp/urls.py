@@ -10,10 +10,14 @@ urlpatterns = [
    path('about/',views.about,name='about'), 
    path('countries/',views.countries,name='countries'),
    path('contact/',views.contact,name='contact'),
-   path('login/',views.login,name='login'),
-   path('ilets/',views.ilets,name='ilets'),
-   path('singapore/',views.singapore,name='singapore'),
-   
+   path('user_login/',views.user_login,name='user_login'),
+   path('user_logout/',views.user_logout,name='user_logout'),
+   # path('ielts/',views.ielts,name='ielts'),
+   # path('client/<str:coaching1>/', views.coaching1, name="coach"),
+   # path('singapore/',views.singapore,name='singapore'), 
+   path('client/<str:country>/', views.country, name="client"),
+   # path('editprofile/<str:user_id>/', views.editprofile, name="editprofile"),
+   path('document/', views.document, name="document"),
    
    
 ]

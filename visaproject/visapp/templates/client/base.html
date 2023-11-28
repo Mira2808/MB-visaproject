@@ -40,7 +40,7 @@
     <!-- header section strats -->
     <div class="hero_bg_box">
       <div class="img-box">
-        <img src="{% static 'images/main.jpg'%}" alt="">
+        <img src="{% static 'images/back.jpeg'%}" alt="">
       </div>
     </div>
 
@@ -101,12 +101,27 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'registration' %}">Register</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'login' %}">Login</a>
-                </li>
+                {% if not user.is_authenticated %}
+                <button type="submit" style="background-color: rgb(0, 68, 255);">
+                  <a class="nav-link" href="{% url 'registration' %}" style="text-decoration: none; color: aliceblue;">Register</a>
+                </button>&nbsp;
+                <button type="submit" style="background-color: rgb(0, 68, 255);">
+                  <a class="nav-link" href="{% url 'user_login' %}" style="text-decoration: none; color: aliceblue;">Login</a>
+                </button>
+                {% endif %}
+
+                {% if user.is_authenticated %}  
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{user.first_name }} 
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    {% comment %} <a class="dropdown-item" href="{% url 'editprofile'%}">Edit Profile</a> {% endcomment %}
+                    <a class="dropdown-item" href="{% url 'user_logout' %}">Logout</a>
+                    
+                  </div>
+                </div>
+                {% endif %}
                
               </ul>
               

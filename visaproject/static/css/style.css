@@ -965,46 +965,59 @@ a:focus {
 .regis{
   margin-top: 100px;
   margin-bottom: 100px;
+
+  
 }
 .regis.btn{
   background-color: blue;
   color: bisque;
 }
+.card text-black
+{
+  color: white;
+  height: 600px;
+  width: 700px;
+  background: transparent;
+  backdrop-filter: blur(20px);
+}
 /* singapore */
-.singapore{
+.con-visa{
   text-align: center;
   color: #ffffff;
 }
 
-.sin-title{
+.con-title{
   position: relative;
   text-align: center;
   color: white;
 }
 
-.sin-top-left{
+.con-top-left{
   position: absolute;
-  font-size: xx-large;
+  font-size: xx-large;          
   top: 8px;
   left: 16px;
 }
 
- .sin-info{
+ .con-info{
   display: grid;
-  align-items: center; 
+  /* align-items: center;  */
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 5px;
 }
 
-.sin-info-img{
+.con-info-img{
   max-width: 100%;
   max-height:100%;
 }
 
-.sin-info-text{
+.con-info-text{
   color: white;
-  height: 400px;
+  height: 600px;
   width: 700px;
   background: transparent;
   backdrop-filter: blur(20px);
+}
+.formdiv{
+margin-top: 50px;
 }

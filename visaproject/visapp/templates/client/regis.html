@@ -1,151 +1,63 @@
+{% extends "client/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-
-<head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-
-  <title>Viseas</title>
-
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
-
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-</head>
-
-<body>
-  <div class="hero_area">
-    <!-- header section strats -->
-    <div class="hero_bg_box">
-      <div class="img-box">
-        <img src="{% static 'images/background.webp'%}" alt="">
-      </div>
-    </div>
-
-    <header class="header_section">
-      <div class="header_top">
-        <div class="container-fluid">
-          <div class="contact_link-container">
-            <a href="" class="contact_link1">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>
-                quicl visa-service,sec-12,gandhinagar
-              </span>
-            </a>
-            <a href="" class="contact_link2">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                Call : +91 9074212654
-              </span>
-            </a>
-            <a href="" class="contact_link3">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                quickvisa@gmail.com
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="header_bottom">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container">
-            <a class="navbar-brand" href="index.html">
-              <span>
-                Viseas
-              </span>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""></span>
-            </button>
-
-            <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
-              <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="service.html"> Services </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="coaching.html">Coaching</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="countries.html"> Countries </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact us</a>
-                </li>
-               
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <!-- end header section -->
+{% block content %}
     <div class="regis">
     <section class="vh-100" >
       <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-lg-12 col-xl-11">
-            <div class="card text-black" style="border-radius: 25px; background-color: rgb(128, 219, 219);">
+            <div class="card text-black" style="border-radius: 25px; background-color: rgb(212, 226, 226);">
               <div class="card-body p-md-5">
                 <div class="row justify-content-center">
                   <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
     
                     <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Registration</p>
     
-                    <form class="mx-1 mx-md-4">
+                    <form class="mx-1 mx-md-4" action="{{regis}}" method="post">
+                      {% csrf_token %}
     
                       <div class="d-flex flex-row align-items-center mb-4">
                         
                         <div class="form-outline flex-fill mb-0">
-                          <label class="form-label" for="form3Example1c">Your Name</label>
-                          <input type="text" id="form3Example1c" class="form-control" />
+                          <label class="form-label" for="forusername">UserName</label>
+                          <input type="text" id="username" name="username" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        
+                        <div class="form-outline flex-fill mb-0">
+                          <label class="form-label" for="forfirstname">Your firstname</label>
+                          <input type="text" id="first_name" name="first_name" class="form-control" />
+                        </div>
+                      </div>
+
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        
+                        <div class="form-outline flex-fill mb-0">
+                          <label class="form-label" for="forlastname">Your lastname</label>
+                          <input type="text" id="last_name" name="last_name" class="form-control" />
                         </div>
                       </div>
     
                       <div class="d-flex flex-row align-items-center mb-4">
                         
                         <div class="form-outline flex-fill mb-0">
-                          <label class="form-label" for="form3Example3c">Your Email</label>
-                          <input type="email" id="form3Example3c" class="form-control" />
+                          <label class="form-label" for="foremail">Your Email</label>
+                          <input type="email" id="useremail" name="email" class="form-control" />
                         </div>
                       </div>
                       <div class="d-flex flex-row align-items-center mb-4">
                         
                         <div class="form-outline flex-fill mb-0">
-                          <label class="form-label" for="form3Example3c">Your phone number</label>
-                          <input type="number" id="form3Example3c" class="form-control" maxlength="10" />
+                          <label class="form-label" for="forphoneno">Your phone number</label>
+                          <input type="number" id="phoneno" name="phoneno" class="form-control" maxlength="10" />
                         </div>
                       </div>
                       <div class="d-flex flex-row align-items-center mb-4">
                         
                         <div class="form-outline flex-fill mb-0">
-                          <label class="form-label" for="form3Example3c">Your Date of Birth</label>
-                          <input type="date" id="form3Example3c" class="form-control" />
+                          <label class="form-label" for="fordateofbirth">Your Date of Birth</label>
+                          <input type="date" id="date_of_birth" name="date_of_birth" class="form-control" />
                         </div>
                       </div><br>
   
@@ -158,16 +70,16 @@
                               <option value="below 12">below 12</option>
                               <option value="12">12</option>
                               <option value="diploma">diploma</option>
-                              <option value="Gratution">Gratution</option>
+                              <option value="graduate">Graduate</option>
                               <option value="masters">Masters</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                          <label for="ilets">IELTS Appeared</label>
-                          <select name="ilets" id="ilets">
-                            <option value="Select Education">Yes</option>
-                            <option value="Yes">Yes</option>
-                            <option value="no">no</option>
+                          <label for="ielts">IELTS Appeared</label>
+                          <select name="ielts" id="ielts">
+                            <option value="Select ielts">Yes</option>
+                            <option value="True">Yes</option>
+                            <option value="False">no</option>
                             
                           </select>
                       </div>
@@ -176,28 +88,28 @@
                       <div class="d-flex flex-row align-items-center mb-4">
                         
                         <div class="form-outline flex-fill mb-0">
-                          <label class="form-label" for="form3Example4c">Password</label>
-                          <input type="password" id="form3Example4c" class="form-control" />
+                          <label class="form-label" for="forpassword">Password</label>
+                          <input type="password" id="password" name="password" class="form-control" />
                         </div>
                       </div>
     
                       <div class="d-flex flex-row align-items-center mb-4">
 
                         <div class="form-outline flex-fill mb-0">
-                          <label class="form-label" for="form3Example4cd">Repeat your password</label>
-                          <input type="password" id="form3Example4cd" class="form-control" />
+                          <label class="form-label" for="forconfirmpassword">Repeat your password</label>
+                          <input type="password" id="confirmpassword" name="confirmpassword" class="form-control" />
                         </div>
                       </div>
     
                       <div class="form-check d-flex justify-content-center mb-5">
                         
                         <label class="form-check-label" for="form2Example3">
-                          Alredy Have An Account?<a href="login.html">Log-in</a>
+                          Alredy Have An Account?<a href="{% url 'login'%}">Log-in</a>
                         </label>
                       </div>
     
                       <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                        <button type="button" class="btn btn-primary btn-lg">Register</button>
+                        <button type="submit" class="btn btn-primary btn-lg">Register</button>
                       </div>
     
                     </form>
@@ -205,7 +117,7 @@
                   </div>
                   <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
     
-                    <img src="{% static 'images/registration.jpg'%}"
+                    <img src="{% static 'images/new-registration.jpg'%}"
                       class="img-fluid" alt="Sample image" height="100%" width="100%">
     
                   </div>
@@ -220,131 +132,5 @@
 
  
 
-
-  <!-- info section -->
-  <section class="info_section ">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="info_logo">
-            <a class="navbar-brand" href="index.html">
-              <span>
-                Viseas
-              </span>
-            </a>
-            <p>
-              Dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quisdotempor incididunt r
-            </p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_links">
-            <h5>
-              Useful Link
-            </h5>
-            <ul>
-              <li>
-                <a href="">
-                  Dolor sit amet, consectetur
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  Magna aliqua. Ut enim ad
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  Minim veniam
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  Quisdotempor incididunt r
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_info">
-            <h5>
-              Contact Us
-            </h5>
-          </div>
-          <div class="info_contact">
-            <a href="" class="">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>
-                Lorem ipsum dolor sit amet,
-              </span>
-            </a>
-            <a href="" class="">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                Call : +01 1234567890
-              </span>
-            </a>
-            <a href="" class="">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                demo@gmail.com
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_form ">
-            <h5>
-              Newsletter
-            </h5>
-            <form action="#">
-              <input type="email" placeholder="Enter your email">
-              <button>
-                Subscribe
-              </button>
-            </form>
-            <div class="social_box">
-              <a href="">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-youtube" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end info_section -->
-
-
-
-
-  <!-- footer section -->
-  <footer class="container-fluid footer_section">
-    <p>
-      &copy; <span id="displayYear"></span> All Rights Reserved By
-      <a href="https://html.design/">Free Html Templates</a>
-    </p>
-  </footer>
-  <!-- footer section -->
-
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <!-- owl slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <script src="js/custom.js"></script>
-
-</body>
-
-</html>
+  {% endblock content%}
+  

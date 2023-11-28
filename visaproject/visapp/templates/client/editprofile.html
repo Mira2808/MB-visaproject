@@ -1,0 +1,83 @@
+{% comment %} {% extends "client/base.html" %}
+{% load static %}
+
+{% block content %}
+<div style="margin-top: 50px; margin-bottom: 50px; margin-left: 100px; margin-right: 100px;">
+<form>
+    <div class="row">
+      <div class="col">
+        <label class="form-label" for="form3Example1c">UserName</label>
+        <input type="text" id="username" name="username" value="{{user_detail.username}}" class="form-control" />
+      </div>
+      <div class="col">
+        <label class="form-label" for="form3Example1c">Your firstname</label>
+        <input type="text" id="first_name" name="first_name" value="{{user_detail.first_name}}" class="form-control" />
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label class="form-label" for="form3Example1c">Your lastname</label>
+            <input type="text" id="last_name" name="last_name" value="{{user_detail.last_name}}" class="form-control" />
+        </div>
+        <div class="col">
+            <label class="form-label" for="form3Example3c">Your Email</label>
+            <input type="email" id="email" name="email" value="{{user_detail.email}}"  class="form-control" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+            <label class="form-label" for="form3Example3c">Your phone number</label>
+            <input type="number" id="phoneno" name="phoneno" value="{{user_detail.phoneno}}" class="form-control" maxlength="10" />
+        </div>
+        <div class="col">
+            <label class="form-label" for="form3Example3c">Your Date of Birth</label>
+            <input type="date" id="date_of_birth" name="date_of_birth" value="{{userd_etail.date_of_birth}}" class="form-control" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+            <label for="education">Current Education</label><br>
+                            <select name="education" id="education">
+                              <option value="Select Education"> Select Education</option>
+                              <option value="below 12">below 12</option>
+                              <option value="12">12</option>
+                              <option value="diploma">diploma</option>
+                              <option value="graduate">Graduate</option>
+                              <option value="masters">Masters</option>
+                            </select>
+        </div>
+        <div class="col">
+            <label for="ielts">IELTS Appeared</label><br>
+                 <select name="ielts" id="ielts">
+                            <option value="Select ielts">Yes</option>
+                            <option value="True">Yes</option>
+                            <option value="False">no</option>
+                            
+                 </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+            <label class="form-label" for="form3Example4c">Password</label>
+            <input type="password" id="password" name="password" class="form-control" />
+        </div>
+        <div class="col">
+            <label class="form-label" for="form3Example4cd">Repeat your password</label>
+            <input type="password" id="confirmpassword" name="confirmpassword" class="form-control" />
+        </div>
+      </div><br>
+                      
+                      
+      <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+        <button type="submit" class="btn btn-primary btn-lg">Update profile</button>
+      </div>
+  </form>
+</div>
+
+
+
+{% endblock content %} {% endcomment %}

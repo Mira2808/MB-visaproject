@@ -226,17 +226,17 @@
       </div>
       <div class="row">
         <div class="col-md-4">
-          <a href="" class="box">
-            <img src="{% static 'images/c1.jpg'%}" alt="">
+          <a href="{% url 'client' 'singapore' %}" class="box">
+            <img src="{% static 'images/singapore.avif'%}" alt="">
             <div class="detail-box">
               <h3>
-                France
+                Singapore
               </h3>
             </div>
           </a>
         </div>
         <div class="col-md-4">
-          <a href="" class="box">
+          <a href="{% url 'client' 'canada' %}"  class="box">
             <img src="{% static 'images/c2.jpg'%}" alt="">
             <div class="detail-box">
               <h3>
@@ -246,17 +246,17 @@
           </a>
         </div>
         <div class="col-md-4">
-          <a href="" class="box">
-            <img src="{% static 'images/c3.jpg'%}" alt="">
+          <a href="{% url 'client' 'uk' %}"  class="box">
+            <img src="{% static 'images/uk.jpg'%}" alt="">
             <div class="detail-box">
               <h3>
-                United States
+                United Kingdom
               </h3>
             </div>
           </a>
         </div>
         <div class="col-md-4">
-          <a href="" class="box">
+          <a href="{% url 'client' 'neweland' %}" class="box">
             <img src="{% static 'images/c4.jpg'%}" alt="">
             <div class="detail-box">
               <h3>
@@ -266,7 +266,7 @@
           </a>
         </div>
         <div class="col-md-4">
-          <a href="" class="box">
+          <a href="{% url 'client' 'australia' %}"  class="box">
             <img src="{% static 'images/c5.jpg'%}" alt="">
             <div class="detail-box">
               <h3>
@@ -276,11 +276,11 @@
           </a>
         </div>
         <div class="col-md-4">
-          <a href="" class="box">
-            <img src="{% static 'images/c6.jpg'%}" alt="">
+          <a href="{% url 'client' 'europe' %}"  class="box">
+            <img src="{% static 'images/europe.jpg'%}" alt="" height="265px">
             <div class="detail-box">
               <h3>
-                Spain
+                Europe 
               </h3>
             </div>
           </a>
@@ -305,21 +305,21 @@
       <div class="row">
         <div class="col-md-9 mx-auto">
           <div class="form_container">
-            <form>
+            <form action="{{index}}" method="post">
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <input type="text" class="form-control" placeholder="First Name" />
+                  <input type="text" class="form-control" id="name" placeholder=" Name" />
                 </div>
                 <div class="form-group col-md-6">
-                  <input type="email" class="form-control" placeholder="Email" />
+                  <input type="email" class="form-control" placeholder="Email" id="email" />
                 </div>
               </div>
               <div class="form-group">
-                <input type="number" class="form-control" id="pnumber" placeholder="phone number">
+                <input type="number" class="form-control" id="phonenumber" placeholder="phone number">
               </div>
 
               <div class="form-group ">
-                <input type="text" class="message-box" placeholder="Message" />
+                <input type="text" class="message-box" placeholder="Message" id="message" />
               </div>
               <div class="btn-box">
                 <button type="submit">Submit</button>

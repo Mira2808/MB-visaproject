@@ -1,0 +1,136 @@
+{% extends "client/base.html" %}
+{% load static %}
+{% block content %}
+
+<div style="margin-top: 50px; margin-bottom: 50px; margin-left: 100px; margin-right: 100px;">
+    <form method="post" action="{{document}}">
+      {% csrf_token %}
+        <h2 style="text-align: center;">Docunent Form</h2>
+
+         {% comment %} <div class="row">
+            <div class="col">
+                <label class="form-label" for="forname">Your Name</label>
+                <input type="text" id="first_name" name="first_name" class="form-control" />
+            </div>
+            <div class="col">
+                <label class="form-label" for="foremail">Your Email</label>
+                <input type="email" id="email" name="email" class="form-control" />
+            </div>
+          </div><br> {% endcomment %}
+        <div class="row">
+          <div class="col">
+            <label for="country">Choose Country</label><br>
+            <select name="country" id="country">
+              <option value=""> Choose Country</option>
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="europe">Europe</option>
+              <option value="newzeland">Newzwland</option>
+              <option value="singapore">Singapore</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="visatype">Visa type</label><br>
+            <select name="visatype" id="visatype">
+              <option value="">visa type</option>
+              <option value="business">Business visa</option>
+              <option value="work">Work visa</option>
+              <option value="tourist">Tourist visa</option>
+              <option value="student">Student visa</option>
+            </select>
+          </div>
+        </div><br>
+    
+        <div class="row">
+           <div class="col">
+           <label for="formFile" class="form-label">Upload Valid Passport and Old Passports (if applicable)</label>
+           <input class="form-control" type="file" id="passport">
+           </div>
+            <div class="col">
+            <label for="formFile" class="form-label">Upload Photos Latest, white background, 35mm x 45mm, 80% face</label>
+            <input class="form-control" type="file" id="photo">
+             </div>
+          </div><br>
+    
+           <div class="row">
+           <div class="col">
+           <label for="formFile" class="form-label">Latest Bank Statements of last 6 months with sign and seal</label>
+           <input class="form-control" type="file" id="bankstatement">
+           </div>
+            <div class="col">
+            <label for="formFile" class="form-label">Income Tax returns</label>
+            <input class="form-control" type="file" id="itr">
+             </div>
+          </div> <br>
+
+           <div class="row">
+           <div class="col">
+           <label for="formFile" class="form-label">Hotel Confirmation</label>
+           <input class="form-control" type="file" id="hotelconfirm">
+           </div>
+            <div class="col">
+            <label for="formFile" class="form-label">Employment Proofs / Leave sanction letter (if job)</label>
+            <input class="form-control" type="file" id="employeeproof">
+             </div>
+          </div> <br>
+
+           <div class="row">
+           <div class="col">
+           <label for="formFile" class="form-label">Proofs of Job /Business(Business registration, Letterhead, Visiting card, etc)</label>
+           <input class="form-control" type="file" id="jobproof">
+           </div>
+            <div class="col">
+            <label for="formFile" class="form-label">Proofs of properties owned like Home, Office, Factory, Land (7/12, 8A), etc.</label>
+            <input class="form-control" type="file" id="propertyproof">
+             </div>
+          </div> <br>
+
+           <div class="row">
+           <div class="col">
+           <label for="formFile" class="form-label">Investments like FD, Post, PF, PPF, LIC, NSC, Stock, etc</label>
+           <input class="form-control" type="file" id="investment">
+           </div>
+            <div class="col">
+            <label for="formFile" class="form-label">Leave sanction letter from Office</label>
+            <input class="form-control" type="file" id="leaveletter">
+             </div>
+          </div> <br>
+          
+
+           <div class="row">
+           <div class="col">
+           <label for="formFile" class="form-label">Aadhar Card, PAN Card, Driving License</label>
+           <input class="form-control" type="file" id="APD">
+           </div>
+            <div class="col">
+            <label for="formFile" class="form-label">Proofs of Accommodation (Hotel Reservation / Private Individual, Travel plan/itinerary)</label>
+            <input class="form-control" type="file" id="accommodation">
+             </div>
+          </div> <br>
+
+
+           <div class="row">
+           <div class="col">
+           <label for="formFile" class="form-label">Marriage Certificate</label>
+           <input class="form-control" type="file" id="marriagecerti">
+           </div>
+            <div class="col">
+            <label for="formFile" class="form-label">Proofs of Children (Birth Certificate, Copy of Passport, etc)</label>
+            <input class="form-control" type="file" id="">
+             </div>
+          </div> <br>
+    
+          
+    
+          
+                          
+                          
+          <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+          </div>
+      </form>
+    </div>
+
+
+
+{% endblock content%}
