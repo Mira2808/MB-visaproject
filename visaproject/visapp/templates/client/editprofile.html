@@ -1,28 +1,28 @@
-{% comment %} {% extends "client/base.html" %}
+{% extends "client/base.html" %}
 {% load static %}
 
 {% block content %}
 <div style="margin-top: 50px; margin-bottom: 50px; margin-left: 100px; margin-right: 100px;">
-<form>
+<form method="POST" action={{editprofile}}>
     <div class="row">
       <div class="col">
         <label class="form-label" for="form3Example1c">UserName</label>
-        <input type="text" id="username" name="username" value="{{user_detail.username}}" class="form-control" />
+        <input type="text" id="username" name="username" value="{{user.username}}" class="form-control" />
       </div>
       <div class="col">
         <label class="form-label" for="form3Example1c">Your firstname</label>
-        <input type="text" id="first_name" name="first_name" value="{{user_detail.first_name}}" class="form-control" />
+        <input type="text" id="first_name" name="first_name" value="{{user.first_name}}" class="form-control" />
       </div>
     </div>
 
     <div class="row">
         <div class="col">
             <label class="form-label" for="form3Example1c">Your lastname</label>
-            <input type="text" id="last_name" name="last_name" value="{{user_detail.last_name}}" class="form-control" />
+            <input type="text" id="last_name" name="last_name" value="{{user.last_name}}" class="form-control" />
         </div>
         <div class="col">
             <label class="form-label" for="form3Example3c">Your Email</label>
-            <input type="email" id="email" name="email" value="{{user_detail.email}}"  class="form-control" />
+            <input type="email" id="email" name="email" value="{{user.email}}"  class="form-control" />
         </div>
       </div>
 
@@ -33,7 +33,7 @@
         </div>
         <div class="col">
             <label class="form-label" for="form3Example3c">Your Date of Birth</label>
-            <input type="date" id="date_of_birth" name="date_of_birth" value="{{userd_etail.date_of_birth}}" class="form-control" />
+            <input type="date" id="date_of_birth" name="date_of_birth" value="{{user.date_of_birth}}" class="form-control" />
         </div>
       </div>
 
@@ -80,4 +80,4 @@
 
 
 
-{% endblock content %} {% endcomment %}
+{% endblock content %} 

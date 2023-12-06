@@ -6,19 +6,19 @@
         <div class="three-coacing">
             <div class="i1">
 
-                <a href="{% url 'coach' coaching='ielts' %}">
-                    <img src="{% static 'images/ileta1.jpg'%}" alt="ilets" height="250px" width="250px" id=".img"><br>
+                <a href="{% url 'ielts' %}">
+                    <img src="{% static 'images/ileta1.jpg'%}" alt="ielts" height="250px" width="250px" id=".img"><br>
                 </a>
                 <b style="font-size: x-large; margin-left: 90px;">IELTS</b>
             </div>
             <div class="i1">
-                <a href="pte.html">
+                <a href="{% url 'pte'%}">
                     <img src="{%static 'images/pte1.jpg'%}" alt="ilets" height="250px" width="250px" id=".img"><br>
                 </a>
                 <b style="font-size: x-large; margin-left: 90px;">PTE</b>
             </div>
             <div class="i1">
-                <a href="gmat.html">
+                <a href="{% url 'gmat'%}">
                     <img src="{% static 'images/gmat.avif'%}" alt="ilets" height="250px" width="250px" id=".img"><br>
                 </a>
                 <b style="font-size: x-large; margin-left: 90px;">GMAT</b>

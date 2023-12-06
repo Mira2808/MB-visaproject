@@ -16,12 +16,11 @@
                       Process Faster
                     </h1>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod magna aliqua. Ut enim ad minim veniam
+                      We provide Visa Service For Many Countries 
                     </p>
                     <div class="btn-box">
-                      <a href="" class="btn-1"> Read more </a>
-                      <a href="" class="btn-2">Get A Quote</a>
+                      <a href="{% url 'countries' %}" class="btn-1"> Read more </a>
+                      
                     </div>
                   </div>
                 </div>
@@ -34,50 +33,28 @@
                 <div class="col-md-9 col-lg-7">
                   <div class="detail-box">
                     <h1>
-                      We Make Visa <br>
-                      Process Faster
+                      We Also Provide <br>
+                      Coaching Service
                     </h1>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod magna aliqua. Ut enim ad minim veniam
+                      We Provide Coaching Service for Ielts,Gmat and Pte
                     </p>
                     <div class="btn-box">
-                      <a href="" class="btn-1"> Read more </a>
-                      <a href="" class="btn-2">Get A Quote</a>
+                      <a href="{% url 'coaching'%}" class="btn-1"> Read more </a>
+                      
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="carousel-item ">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-9 col-lg-7">
-                  <div class="detail-box">
-                    <h1>
-                      We Make Visa <br>
-                      Process Faster
-                    </h1>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod magna aliqua. Ut enim ad minim veniam
-                    </p>
-                    <div class="btn-box">
-                      <a href="" class="btn-1"> Read more </a>
-                      <a href="" class="btn-2">Get A Quote</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
         <div class="container idicator_container">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            {% comment %} <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> {% endcomment %}
           </ol>
         </div>
       </div>
@@ -105,11 +82,8 @@
                 Business Visa
               </h6>
               <p>
-                Minima consequatur architecto eaque assumenda ipsam itaque quia eum in doloribus debitis impedit ut minus tenetur corrupti excepturi ullam.
+              A business visa is a travel authorization that allows an entrepreneur or company employees to visit a foreign country temporarily for business purposes. Under this kind of visa they may perform business activities that don't constitute work or employment in the country of issue whilst visiting.
               </p>
-              <a href="">
-                Read More
-              </a>
             </div>
           </div>
         </div>
@@ -123,11 +97,9 @@
                 Work Visa
               </h6>
               <p>
-                Minima consequatur architecto eaque assumenda ipsam itaque quia eum in doloribus debitis impedit ut minus tenetur corrupti excepturi ullam.
+                A work visa is a type of visa that grants the holder authorization to accept employment in a foreign country. It may be issued as a stamp in the passport or as a separate document. It is needed to enter the country for the purpose of performing paid work.
               </p>
-              <a href="">
-                Read More
-              </a>
+              
             </div>
           </div>
         </div>
@@ -140,12 +112,10 @@
               <h6>
                 Tourist Visa
               </h6>
-              <p>
-                Minima consequatur architecto eaque assumenda ipsam itaque quia eum in doloribus debitis impedit ut minus tenetur corrupti excepturi ullam.
+              <p> 
+                Tourist/Travel visas allow the bearer to enter a foreign country for touristic and leisure purposes only and stay for a predetermined amount of time. These visas do not entitle the holder to work or engage in any business activities in the host country.
               </p>
-              <a href="">
-                Read More
-              </a>
+              
             </div>
           </div>
         </div>
@@ -159,11 +129,9 @@
                 Student Visa
               </h6>
               <p>
-                Minima consequatur architecto eaque assumenda ipsam itaque quia eum in doloribus debitis impedit ut minus tenetur corrupti excepturi ullam.
+                A student visa is a legal immigration document issued to students by another country that allows them to study for a certain period of time. Student visas are commonly used by students at colleges, universities, and specialty institutions.
               </p>
-              <a href="">
-                Read More
-              </a>
+              
             </div>
           </div>
         </div>
@@ -193,11 +161,7 @@
               </h2>
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-              in reprehenderit in voluptate velit
+              Quick-visa Consultant is a leading foreign education and immigration consultancy aimed at providing genuine, reliable and expert advise to people interested in studying, migrating or visiting abroad at affordable price. We have assisted thousands of clients in turning their dreams into reality. Motivated by our core values - ethics, honesty and expertise - we are one of the most trusted name in the field of overseas education and immigration.
             </p>
             <div class="btn-box">
               <a href="">
@@ -299,27 +263,29 @@
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
-          Inquiry Form
+          Need Visa? We Can Make Your Dream Come True!
         </h2>
+        <h4>Fill Below Form If You Have Any Query</h4>
       </div>
       <div class="row">
         <div class="col-md-9 mx-auto">
           <div class="form_container">
             <form action="{{index}}" method="post">
+              {% csrf_token %} 
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="name" placeholder=" Name" />
+                  <input type="text" class="form-control" id="name" placeholder=" Name" name="name" />
                 </div>
                 <div class="form-group col-md-6">
-                  <input type="email" class="form-control" placeholder="Email" id="email" />
+                  <input type="email" class="form-control" placeholder="Email" id="email" name="email" />
                 </div>
               </div>
               <div class="form-group">
-                <input type="number" class="form-control" id="phonenumber" placeholder="phone number">
+                <input type="number" class="form-control" id="phoneno" placeholder="phone number" name="phoneno">
               </div>
 
               <div class="form-group ">
-                <input type="text" class="message-box" placeholder="Message" id="message" />
+                <input type="text" class="message-box" placeholder="Message" id="message" name="message" />
               </div>
               <div class="btn-box">
                 <button type="submit">Submit</button>
@@ -347,17 +313,15 @@
             <div class="item">
               <div class="box">
                 <div class="img-box">
-                  <img src="{% static 'images/client-1.jpg'%}" alt="" class="img-1">
+                  <img src="{% static 'images/client-3.jpg'%}" alt="" class="img-1">
                 </div>
                 <div class="detail-box">
                   <h5>
-                    Mark Evans
+                    Rahi patel
                   </h5>
-                  <h6>
-                    Magna
-                  </h6>
+                 
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    Amazing n worth with their professionalism. My experience with Ohm was awesome. Great work.. I got my Poland student visa through Ohm Consultant. Initially, I was depressed but Atul Sir from Ohm Consultant had guided me nicely throughout the process.
                   </p>
                 </div>
               </div>
@@ -365,17 +329,15 @@
             <div class="item">
               <div class="box">
                 <div class="img-box">
-                  <img src="{% static 'images/client-2.jpg'%}" alt="" class="img-1">
+                  <img src="{% static 'images/client-5.jpeg'%}" alt="" class="img-1">
                 </div>
                 <div class="detail-box">
                   <h5>
-                    Anthony White
+                    Rajesh Shukla
                   </h5>
-                  <h6>
-                    Magna
-                  </h6>
+                  
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    I am so happy that I got my UK Visitor visa without any hurdle. Thank you for your kind guidance, especially for documentation part. It was really wonderful experience with Ohm Visa Consultant. I am thankful to Ohm Consultant to assist me in getting my UK visa.
                   </p>
                 </div>
               </div>
@@ -383,17 +345,15 @@
             <div class="item">
               <div class="box">
                 <div class="img-box">
-                  <img src="{% static 'images/client-1.jpg'%}" alt="" class="img-1">
+                  <img src="{% static 'images/client-6.jpg'%}" alt="" class="img-1">
                 </div>
                 <div class="detail-box">
                   <h5>
-                    Mark Evans
+                    Bhumik Jain
                   </h5>
-                  <h6>
-                    Magna
-                  </h6>
+                  
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                  I am Mrugesh Patel from Ahmedabad. I got my student visa of New Zealand by the help of Ohm Consultant. I suggest coming to Ohm Consultant, who are desirable to study in New Zealand or any developed country. Be a part of friendly, trustworthy and genuine services.
                   </p>
                 </div>
               </div>
@@ -401,17 +361,15 @@
             <div class="item">
               <div class="box">
                 <div class="img-box">
-                  <img src="{% static 'images/client-2.jpg'%}" alt="" class="img-1">
+                  <img src="{% static 'images/client-4.jpg'%}" alt="" class="img-1">
                 </div>
                 <div class="detail-box">
                   <h5>
-                    Anthony White
+                    Nensi Vala
                   </h5>
-                  <h6>
-                    Magna
-                  </h6>
+                  
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    I got my USA and Canada visitors visa through Ohm Consultant. Special thanks to Sonalimem and all the staff members for their kind support. Thank you so much for making my dream into reality.
                   </p>
                 </div>
               </div>

@@ -113,10 +113,10 @@
                 {% if user.is_authenticated %}  
                 <div class="dropdown">
                   <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {{user.first_name }} 
+                    {{user.username }} 
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    {% comment %} <a class="dropdown-item" href="{% url 'editprofile'%}">Edit Profile</a> {% endcomment %}
+                    <a class="dropdown-item" href="{% url 'editprofile' user.id %}">Edit Profile</a>
                     <a class="dropdown-item" href="{% url 'user_logout' %}">Logout</a>
                     
                   </div>
@@ -151,11 +151,11 @@
           <div class="info_logo">
             <a class="navbar-brand" href="index.html">
               <span>
-                Viseas
+                 Quick Viseas
               </span>
             </a>
             <p>
-              Dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quisdotempor incididunt r
+              We Are Here To Make Your Visa Process Faster
             </p>
           </div>
         </div>
@@ -167,7 +167,7 @@
             <ul>
               <li>
                 <a href="">
-                  Dolor sit amet, consectetur
+                  www.quickvisa.com
                 </a>
               </li>
               <li>
@@ -198,19 +198,19 @@
             <a href="" class="">
               <i class="fa fa-map-marker" aria-hidden="true"></i>
               <span>
-                Lorem ipsum dolor sit amet,
+                Quick visa-service,Sec-12,Gandhinagar
               </span>
             </a>
             <a href="" class="">
               <i class="fa fa-phone" aria-hidden="true"></i>
               <span>
-                Call : +01 1234567890
+                Call : +91 9074212654
               </span>
             </a>
             <a href="" class="">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <span>
-                demo@gmail.com
+                quickvisa@gmail.com
               </span>
             </a>
           </div>
@@ -266,6 +266,7 @@
   <!-- owl slider -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
+  
   <script src="{% static 'js/custom.js'%}"></script>
 
 </body>

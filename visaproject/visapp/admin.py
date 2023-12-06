@@ -9,4 +9,5 @@ admin.site.register(models.Adviserprofile)
 admin.site.register(models.Inquiry)
 admin.site.register(models.Country)
 admin.site.register(models.Payment)  
+admin.site.register(models.Contactus)
    

@@ -958,8 +958,16 @@ a:focus {
   margin-right: 100px;
   margin-top: 70px;
   margin-bottom: 70px; 
-  background-color: #7993e2;
+  /* background-color: #7993e2; */
+  background: transparent;
+  backdrop-filter: blur(120px);
+  border: 2px solid black;
 
+}
+#blur{
+  background: transparent;
+  backdrop-filter: blur(20px);
+  border: 2px solid black;
 }
 /* registration */
 .regis{
