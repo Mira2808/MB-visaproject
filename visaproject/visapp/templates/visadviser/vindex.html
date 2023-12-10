@@ -1,113 +1,128 @@
+{% extends "visadviser/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<!-- Coding by CodingLab | www.codinglabweb.com-->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visa Adviser</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="{% static 'css/vstyle.css'%}"  />
+{% block content %}
 
-    <!-- Boxicons CSS -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <nav>
-      <div class="logo">
-        <i class="bx bx-menu menu-icon"></i>
-        <span class="logo-name">Quick-Visa</span>
-      </div>
+  <!-- Dark overlay -->
+  <div class="overlay"></div>
 
-      <div class="sidebar">
-        <div class="logo">
-          <i class="bx bx-menu menu-icon"></i>
-          <span class="logo-name">Welcome To Dashboard</span>
-        </div>
+  <!-- Content -->
+  <div class="content">
+  
+    <!-- open sidebar menu -->
+    <a class="btn btn-primary btn-customized open-menu" href="#" role="button">
+                <i class="fas fa-align-left"></i> <span>Menu</span>
+            </a>
+  
+        <!-- Top content -->
+        <div class="top-content section-container" id="top-content">
+          <div class="container" >
+              <div class="row">
+                  <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                    <h1 class="wow fadeIn"><strong>Welcome To Visa Advicer Side</strong></h1>
+                    <div class="description wow fadeInLeft">
+                      <p>
+                        Here You Can View User,Country and Visaype And Also You Can Add Country And Visatype
 
-        <div class="sidebar-content">
-          <ul class="lists">
-            <li class="list">
-              <a href="{% url 'registeruser'%}" class="nav-link">
-                <i class="bx bx-home-alt icon"></i>
-                <span class="link">Registerd User</span>
+                      </p>
+                    </div>
+                    <div class="buttons wow fadeInUp">							
+              <a class="btn btn-primary btn-customized-2 scroll-link" href="#section-3" role="button">
+                <i class="fa-solid fa-plus"></i>
+                Edit Profile
               </a>
-            </li>
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-bar-chart-alt-2 icon"></i>
-                <span class="link">All Country</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-bell icon"></i>
-                <span class="link">Add Country</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-message-rounded icon"></i>
-                <span class="link">All Visatype</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-pie-chart-alt-2 icon"></i>
-                <span class="link">Add Visatype</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-heart icon"></i>
-                <span class="link">Query Details</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-folder-open icon"></i>
-                <span class="link">Contact Details</span>
-              </a>
-            </li>
-          </ul>
-
-          <div class="bottom-cotent">
-            
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-log-out icon"></i>
-                <span class="link">Logout</span>
-              </a>
-            </li>
+            </div>
+                  </div>
+              </div>
           </div>
         </div>
+
+        <!-- Section 1 -->
+        <div class="section-1-container section-container" id="section-1">
+          <div class="container">
+              <div class="row">
+                  <div class="col section-1 section-description wow fadeIn">
+                      <h2>Query Details</h2>
+                      <div class="divider-1 wow fadeInUp"><span></span></div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-8 section-2-box wow fadeInUp">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="section-1-box-icon">
+                          <a class="btn btn-primary btn-customized scroll-link" href="#" role="button">
+                    <i class="fas fa-plus"></i> Query Details
+                  </a>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                          <h3><b>Query Details</b></h3>
+                          <p>Here You Check All Query Details And Give Answer To Their Query</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8 section-2-box wow fadeInDown">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="section--box-icon">
+                  <a class="btn btn-primary btn-customized scroll-link" href="#" role="button">
+                    <i class="fas fa-plus"></i> Contact Details
+                  </a>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                          <h3><b>Contact Details</b></h3>
+                          <p>Here You Check All Contact Details And Give Answer To Their Question</p>
+                <!-- <button>Contact Details</button> -->
+                        </div>
+                      </div>
+                    </div>
+                    
+              </div>
+          </div>
+        </div>
+
+  
+    <!-- Section 4 -->
+        <div class="section-4-container section-container section-container-image-bg" id="section-4">
+          <div class="container">
+              <div class="row">
+                  <div class="col section-4 section-description wow fadeInLeftBig">
+                    <h2>Ready to Try the Platform?</h2>
+                      <p>
+                        Selling tickets has never been easier. Sign up and create your first sport event listing on OSTB. Let's fill every seat in the hall together.
+                      </p>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col section-bottom-button wow fadeInUp">
+                        <a class="btn btn-primary btn-customized scroll-link" href="#section-1" role="button">
+              <i class="fas fa-plus"></i> Create Event
+            </a>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer-container">
+
+          <div class="container">
+            <div class="row">
+
+                    <div class="col">
+                      <!-- &copy; Bootstrap 4 Template with Sidebar Menu. Download it for free on <a href="https://azmind.com">AZMIND</a>. -->
+                    </div>
+
+                </div>
+          </div>
+
+        </footer>
+      
       </div>
-    </nav>
-    {% block content %}
-
-    {% endblock content %}
-
-    <section class="overlay"></section>
-
-    <script>
-      const navBar = document.querySelector("nav"),
-        menuBtns = document.querySelectorAll(".menu-icon"),
-        overlay = document.querySelector(".overlay");
-
-      menuBtns.forEach((menuBtn) => {
-        menuBtn.addEventListener("click", () => {
-          navBar.classList.toggle("open");
-        });
-      });
-
-      overlay.addEventListener("click", () => {
-        navBar.classList.remove("open");
-      });
-    </script>
-  </body>
-</html>
+      <!-- End content -->
+    
+    </div>
+    <!-- End wrapper -->
+  {% endblock content%}

@@ -20,6 +20,8 @@ urlpatterns = [
    path('document/', views.document, name="document"),
 
    path('visadviser/vindex',views.vindex,name="vindex"),
+   path('visadviser/registeruser',views.registeruser,name="registeruser"),
+   path('visadviser/editprofile',views.editprofile,name="editprofile"),
 
 
    path('main-admin/aindex',views.aindex,name="aindex"), 

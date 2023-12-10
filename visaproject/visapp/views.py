@@ -212,7 +212,13 @@ def document(request):
 
 
 def vindex(request):
-     return render(request,"visadviser/vindex.html")  
+     return render(request,"visadviser/vindex.html")
+
+def registeruser(request):
+     return render(request,"visadviser/registeruser.html")  
+
+def editprofile(request):
+     return render(request,"visadviser/editprofile.html")
 
 
 def aindex(request):
