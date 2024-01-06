@@ -270,7 +270,7 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(.disa
 
 /***** General style, all sections *****/
 
-.section-container { margin: 0 auto; padding-bottom: 80px; }
+.section- { margin: 0 auto; padding-bottom: 80px; }
 
 .section-container-gray-bg { background: #f8f8f8; }
 
@@ -295,10 +295,12 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(.disa
 
 /***** Top content *****/
 
+
 .top-content { 
 	width: 100%; 
 	padding: 60px 0 120px 0;
-	background-color: #611a1a;
+	background: #5825aa;
+	display: block;
 }
 
 .top-content h1 { padding-top: 60px; color: #fff; }
@@ -438,6 +440,59 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(.disa
 
 footer { padding: 40px 0; }
 
+
 .regis-head{
-    background-color: aqua;
+	background-color: #76b5d2;
+	color: #0d0122;
+	height: 70px;
+	width: 100%;
+	font-size: 40px;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	padding-top: 15px;
 }
+
+.contact_bg_box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	
+	z-index: -1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
+	border: 2px solid black;
+    
+  }
+  
+
+  .margin
+  {
+	margin-top: 200px;
+  }
+.rcontainer{
+  height: 300px;
+  width: 700px;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  margin-top: 150px;
+  margin-left: 300px;
+  color:#040404
+  
+}
+
+.doc-image{
+	background-image: url(F:\Finalproject\visaproject\static\images\visadviser.jpeg);
+	background-repeat: repeat-x;
+	border: 2px solid black;
+}
+ 

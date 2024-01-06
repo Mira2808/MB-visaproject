@@ -117,6 +117,7 @@
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="{% url 'editprofile' user.id %}">Edit Profile</a>
+                    <a class="dropdown-item" href="{% url 'editpassword' user.id %}">Edit Password</a>
                     <a class="dropdown-item" href="{% url 'user_logout' %}">Logout</a>
                     
                   </div>

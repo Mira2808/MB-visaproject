@@ -37,7 +37,7 @@ class Document(models.Model):
     user_model = models.ForeignKey(User, on_delete=models.CASCADE,null=True,blank=True)
     
     class Meta:
-        verbose_name_plural = "Document"
+        verbose_name_plural = "Document"  
 
 
 EDUCATION=[

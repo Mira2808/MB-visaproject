@@ -1,4 +1,4 @@
-{% extends "visadviser/base.html" %}
+{% extends "visadviser/vbase.html" %}
 {% load static %}
 
 {% block content %}
@@ -15,13 +15,13 @@
             </a>
   
         <!-- Top content -->
-        <div class="top-content section-container" id="top-content">
+        <div class=" section-container" id="top-content" style="background: #b3b7f6;">
           <div class="container" >
               <div class="row">
-                  <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                  <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 margin">
                     <h1 class="wow fadeIn"><strong>Welcome To Visa Advicer Side</strong></h1>
                     <div class="description wow fadeInLeft">
-                      <p>
+                      <p style="color:black">
                         Here You Can View User,Country and Visaype And Also You Can Add Country And Visatype
 
                       </p>
@@ -31,7 +31,7 @@
                 <i class="fa-solid fa-plus"></i>
                 Edit Profile
               </a>
-            </div>
+            </div><br>
                   </div>
               </div>
           </div>
@@ -39,7 +39,7 @@
 
         <!-- Section 1 -->
         <div class="section-1-container section-container" id="section-1">
-          <div class="container">
+          <div class="container con2">
               <div class="row">
                   <div class="col section-1 section-description wow fadeIn">
                       <h2>Query Details</h2>
@@ -51,14 +51,12 @@
                     <div class="row">
                       <div class="col-md-4">
                         <div class="section-1-box-icon">
-                          <a class="btn btn-primary btn-customized scroll-link" href="#" role="button">
-                    <i class="fas fa-plus"></i> Query Details
-                  </a>
+                         <a href="{% url 'inquiry'%}"><button type="button" class="btn btn-primary">inquiry Details</button></a>
                         </div>
                       </div>
                       <div class="col-md-8">
-                          <h3><b>Query Details</b></h3>
-                          <p>Here You Check All Query Details And Give Answer To Their Query</p>
+                          <h3><b>Inquiry Details</b></h3>
+                          <p>Here You Check All Inquiry Details And Give Answer To Their Query</p>
                         </div>
                       </div>
                     </div>
@@ -66,9 +64,7 @@
                     <div class="row">
                       <div class="col-md-4">
                         <div class="section--box-icon">
-                  <a class="btn btn-primary btn-customized scroll-link" href="#" role="button">
-                    <i class="fas fa-plus"></i> Contact Details
-                  </a>
+                          <a href="{% url 'v_contact'%}"><button type="button" class="btn btn-primary">Contact Details</button></a>
                         </div>
                       </div>
                       <div class="col-md-8">
@@ -84,27 +80,7 @@
         </div>
 
   
-    <!-- Section 4 -->
-        <div class="section-4-container section-container section-container-image-bg" id="section-4">
-          <div class="container">
-              <div class="row">
-                  <div class="col section-4 section-description wow fadeInLeftBig">
-                    <h2>Ready to Try the Platform?</h2>
-                      <p>
-                        Selling tickets has never been easier. Sign up and create your first sport event listing on OSTB. Let's fill every seat in the hall together.
-                      </p>
-                  </div>
-              </div>
-              <div class="row">
-                <div class="col section-bottom-button wow fadeInUp">
-                        <a class="btn btn-primary btn-customized scroll-link" href="#section-1" role="button">
-              <i class="fas fa-plus"></i> Create Event
-            </a>
-                </div>
-              </div>
-          </div>
-        </div>
-
+    
         <!-- Footer -->
         <footer class="footer-container">
 

@@ -1,0 +1,46 @@
+{% extends "visadviser/vbase.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="contact_section layout_padding">
+  <div class="contact_bg_box">
+      <img src="{% static 'images/visadviser.jpeg'%}" height="100%" width="100%" alt="">
+  </div> 
+    <div class="rcontainer">
+      <div class="heading_container heading_center">
+        <h2><b>
+          Edit Client Details
+        </b> </h2>
+      </div>
+            <form action="{{editregisteruser}}" method="POST">
+              <div class="row">
+                {% csrf_token %}   
+                  <div class="col-md-6 mb-3">
+                      <label for="">First Name</label>
+                      <input type="text" name="fname" class="form-control" value="{{registeruser.first_name}}">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label for="">Last Name</label>
+                      <input type="text" name="lname" class="form-control" value="{{registeruser.last_name}}">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label for="">Email</label>
+                      <input type="text" name="email" class="form-control" value="{{registeruser.email}}">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label for="">Contact Number</label>
+                      <input type="number" name="phone" class="form-control" value="{{registeruser2.phone}}">
+                  </div>
+                 
+              </div>
+              <div class="text-end">
+                  <button class="btn btn-dark" name="update_user_data">Update details</button>
+              </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock content%}

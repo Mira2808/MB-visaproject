@@ -1,0 +1,34 @@
+{% extends "visadviser/vbase.html" %}
+{% load static %}
+
+{% block content %}
+<div class="regis-head"><b>Inquiry Details</b></div>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phoneno</th>
+        <th scope="col">Message</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for inquiry_details in inquiry_details%}
+      <tr>
+        <th scope="row">{{inquiry_details.id}}</th>
+        <td>{{inquiry_details.name}}</td>
+        <td>{{inquiry_details.phoneno}}</td>
+        <td>{{inquiry_details.email}}</td>
+        <td>{{inquiry_details.message}}</td>
+        <td><button type="button" class="btn btn-danger"><a href="{% url 'del_inq' Inquiry.id %}">Delete</a></button></td>
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>
+  
+  
+
+{% endblock content%}

@@ -1,0 +1,36 @@
+{% extends "visadviser/vbase.html" %}
+{% load static %}
+
+{% block content %}
+<div class="regis-head"><b>Contact Details</b></div>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phoneno</th>
+        <th scope="col">Message</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for contact_details in contact_details %}
+      <tr>
+        <th scope="row">{{contact_details.id}}</th>
+        <td>{{contact_details.fname}}</td>
+        <td>{{contact_details.lname}}</td>
+        <td>{{contact_details.email}}</td>
+        <td>{{contact_details.phoneno}}</td>
+        <td>{{contact_details.message}}</td>
+        <td><a href="{% url 'del_con' Contactus.id%}"><button type="button" class="btn btn-danger">Delete</button></a></td>
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>
+  
+  
+
+{% endblock content%}

@@ -1,8 +1,8 @@
-{% extends "visadviser/base.html" %}
+{% extends "visadviser/vbase.html" %}
 {% load static %}
 
 {% block content %}
-<div><strong style="background-color: black;">Registerd User</strong></div>
+<div class="regis-head"><b>Registerd User</b></div>
 <table class="table">
     <thead class="thead-dark">
       <tr>
@@ -15,25 +15,17 @@
       </tr>
     </thead>
     <tbody>
+      {% for registeruser in registeruser%}
       <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>1234567890</td>
+        <th scope="row">{{registeruser.id}}</th>
+        <td>{{registeruser.first_name}}</td>
+        <td>{{registeruser.last_name}}</td>
+        <td>{{registeruser.email}}</td>
+        <td>{{registeruser2.phone}}</td>
+        <td><a href="{% url 'editregisteruser' user.id%}"><button type="button" class="btn btn-primary">Edit</button></a></td>
       </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
+      {% endfor %}
+      
     </tbody>
   </table>
   

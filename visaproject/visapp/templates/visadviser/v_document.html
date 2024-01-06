@@ -1,27 +1,21 @@
-{% extends "client/base.html" %}
+{% extends "visadviser/vbase.html" %}
 {% load static %}
 {% block content %}
 
 
 
 
-<div style="margin-top: 50px; margin-bottom: 50px; margin-left: 100px; margin-right: 100px;">
-    <form method="post" action="{{document}}" enctype="multipart/form-data">
+<div style="margin-top: 50px; margin-bottom: 50px; margin-left: 100px; margin-right: 100px;" class="doc-image">
+    {% comment %} <div class="contact_bg_box">
+        <img src="{% static 'images/visadviser.jpeg'%}" height="100%" width="100%" alt="">
+    </div> {% endcomment %}
+    
+    <form method="post" action="{{v_document}}" enctype="multipart/form-data">
       {% csrf_token %}
-        <h2 style="text-align: center;">Docunent Form</h2>
-<div class="container">
-  <p>{{message}}</p>
-</div>
-          <div class="row">
-            <div class="col">
-                <label class="form-label" for="forname">Your Name</label>
-                <input type="text" id="first_name" name="first_name" value="{{user.username}}" class="form-control"/>
-            </div>
-            <div class="col">
-                <label class="form-label" for="foremail">Your Email</label>
-                <input type="email" id="email" name="email" value="{{user.email}}" class="form-control" />
-            </div>
-          </div><br>
+    <h2 style="text-align: center;"><b>Docunent Form</b></h2>
+    <div class="container">
+      <p>{{message}}</p>
+      </div>
         <div class="row">
           <div class="col">
             <label for="country">Choose Country</label><br>
@@ -49,7 +43,7 @@
         <div class="row">
            <div class="col">
            <label for="formFile" class="form-label">Upload Valid Passport and Old Passports (if applicable)</label>
-           <input class="form-control" type="file" id="passport" name="passport">
+           <input class="form-control" type="file" id="passport" name="passport" value="{{document_detail.passport}}">
            </div>
             <div class="col">
             <label for="formFile" class="form-label">Upload Photos Latest, white background, 35mm x 45mm, 80% face</label>
@@ -90,6 +84,7 @@
              </div>
           </div> <br>
 
+          
            <div class="row">
            <div class="col">
            <label for="formFile" class="form-label">Investments like FD, Post, PF, PPF, LIC, NSC, Stock, etc</label>
@@ -135,6 +130,10 @@
           </div>
       </form>
     </div>
+
+    <div class="contact_bg_box">
+      <img src="{% static 'images/visadviser.jpeg'%}" height="100%" width="100%" alt="">
+  </div>
 
 
 

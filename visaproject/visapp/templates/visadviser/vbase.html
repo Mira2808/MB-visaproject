@@ -1,0 +1,98 @@
+{% load static %}
+
+
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+		<!-- Required meta tags -->
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <title>Visa-Adviser</title>  
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'assets/css/jquery.mCustomScrollbar.min.css'%}">
+        <link rel="stylesheet" href="{% static 'assets/css/animate.css'%}">
+        <link rel="stylesheet" href="{% static 'assets/css/style.css'%}">
+        <link rel="stylesheet" href="{% static 'assets/css/media-queries.css'%}">
+		<link rel="stylesheet" href="{% static 'assets/css/new.css'%}">
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.pngvd">
+
+    </head>
+
+    <body>
+
+		<!-- Wrapper -->
+    	<div class="wrapper">
+
+			<!-- Sidebar -->
+			<nav class="sidebar">
+				
+				<!-- close sidebar menu -->
+				<div class="dismiss">
+					<i class="fas fa-arrow-left"></i>
+				</div>
+				
+				<!-- <div class="logo">
+					<h3><a href="index.html">Create & Sell Tickets Online!</a></h3>
+				</div> -->
+				
+				<ul class="list-unstyled menu-elements">
+					<h4><b style="color: rgb(249, 246, 246);">This is Visa-Advicer Side</b></h4>
+					<li class="list">
+						<a class="nav-link" href="{% url 'vindex'%}"><i class="fas fa-home"></i><span class="link">Home</span></a>
+					</li>
+					<li class="list">
+						<a class="nav-link" href="{% url 'v_editprofile'%}"><i class="fas fa-user"></i><span class="link">Edit Profile</span> </a>
+					</li>
+					<li class="list">
+						<a class="nav-link" href="{% url 'registeruser' user.id%}"><i class="fas fa-users"></i> <span class="link">Registerd User</span></a>
+					</li>
+					
+					<li class="list">
+						<a class="nav-link" href="{% url 'v_document' user.id %}"><i class="fa-regular fa-file"></i><span class="link">Documents</span></a>
+					</li>
+					<li class="list">
+						<a class="nav-link" href="{% url 'inquiry'%}"><i class="fa-solid fa-clipboard-question"></i><span class="link">Inquiry Details</span></a>
+					</li>
+					<li class="list">
+						<a class="nav-link" href="{% url 'v_contact'%}"><i class="fa-solid fa-address-book"></i><span class="link">Contact Details</span></a>
+					</li><br>
+					<li class="list">
+						<a class="nav-link" href="#"><i class="fa-solid fa-right-from-bracket"></i><span class="link">Log Out</span></a>
+					</li>
+				</ul>
+			
+			</nav>
+			<!-- End sidebar -->
+
+            
+     {% block content %}
+
+     {% endblock content %}
+           <!-- Javascript -->
+		<script src="https://kit.fontawesome.com/17178ec874.js" crossorigin="anonymous"></script>
+		<script src="{% static 'assets/js/jquery-3.3.1.min.js'%}"></script>
+		<script src="{% static 'assets/js/jquery-migrate-3.0.0.min.js'%}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="{% static 'assets/js/jquery.backstretch.min.js'%}"></script>
+        <script src="{% static 'assets/js/wow.min.js'%}"></script>
+        <script src="{% static 'assets/js/jquery.waypoints.min.js'%}"></script>
+        <script src="{% static 'assets/js/jquery.mCustomScrollbar.concat.min.js'%}"></script>
+        <script src="{% static 'assets/js/scripts.js'%}"></script>
+
+    </body>
+
+</html> 

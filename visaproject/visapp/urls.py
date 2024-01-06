@@ -17,12 +17,18 @@ urlpatterns = [
    path('gmat/',views.gmat,name='gmat'),
    path('client/<str:country>/', views.country, name="client"),
    path('editprofile/<str:user_id>/', views.editprofile, name="editprofile"),
+   path('editpassword/<str:user_id>/', views.editpassword, name="editpassword"),
    path('document/', views.document, name="document"),
 
    path('visadviser/vindex',views.vindex,name="vindex"),
-   path('visadviser/registeruser',views.registeruser,name="registeruser"),
-   path('visadviser/editprofile',views.editprofile,name="editprofile"),
-
+   path('visadviser/registeruser/<str:user_id>/',views.registeruser,name="registeruser"),
+   path('visadviser/v_editprofile',views.v_editprofile,name="v_editprofile"),
+   path('visadviser/inquiry',views.inquiry,name="inquiry"),
+   path('visadviser/v_contact',views.v_contact,name="v_contact"),
+   path('visadviser/v_document/<str:user_id>/',views.v_document,name="v_document"),
+   path('visadviser/editregisteruser/<str:user_id>/',views.editregisteruser,name="editregisteruser"),
+   path('visadviser/del_inq/<str:inq_id>/',views.del_inq,name="del_inq"),
+      path('visadviser/del_con/<str:c_id>/',views.del_con,name="del_con"),
 
    path('main-admin/aindex',views.aindex,name="aindex"), 
    
