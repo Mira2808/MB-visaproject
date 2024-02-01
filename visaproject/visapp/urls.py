@@ -28,7 +28,7 @@ urlpatterns = [
    path('visadviser/v_document/<str:user_id>/',views.v_document,name="v_document"),
    path('visadviser/editregisteruser/<str:user_id>/',views.editregisteruser,name="editregisteruser"),
    path('visadviser/del_inq/<str:inq_id>/',views.del_inq,name="del_inq"),
-      path('visadviser/del_con/<str:c_id>/',views.del_con,name="del_con"),
+   path('visadviser/del_con/<str:c_id>/',views.del_con,name="del_con"),
 
    path('main-admin/aindex',views.aindex,name="aindex"), 
    

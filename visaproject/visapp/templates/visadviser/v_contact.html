@@ -24,7 +24,7 @@
         <td>{{contact_details.email}}</td>
         <td>{{contact_details.phoneno}}</td>
         <td>{{contact_details.message}}</td>
-        <td><a href="{% url 'del_con' Contactus.id%}"><button type="button" class="btn btn-danger">Delete</button></a></td>
+        <td><a href="{% url 'del_con' con_obj.id%}"><button type="button" class="btn btn-danger">Delete</button></a></td>
       </tr>
       {% endfor %}
       

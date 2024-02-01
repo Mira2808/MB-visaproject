@@ -64,10 +64,10 @@
 						<a class="nav-link" href="{% url 'v_document' user.id %}"><i class="fa-regular fa-file"></i><span class="link">Documents</span></a>
 					</li>
 					<li class="list">
-						<a class="nav-link" href="{% url 'inquiry'%}"><i class="fa-solid fa-clipboard-question"></i><span class="link">Inquiry Details</span></a>
+						<a class="nav-link" href="{% url 'inquiry' inq_obj.id %}"><i class="fa-solid fa-clipboard-question"></i><span class="link">Inquiry Details</span></a>
 					</li>
 					<li class="list">
-						<a class="nav-link" href="{% url 'v_contact'%}"><i class="fa-solid fa-address-book"></i><span class="link">Contact Details</span></a>
+						<a class="nav-link" href="{% url 'v_contact' con_obj.id %}"><i class="fa-solid fa-address-book"></i><span class="link">Contact Details</span></a>
 					</li><br>
 					<li class="list">
 						<a class="nav-link" href="#"><i class="fa-solid fa-right-from-bracket"></i><span class="link">Log Out</span></a>

@@ -297,7 +297,7 @@ def editregisteruser(request,user_id):
 
 def del_inq(request,inq_id):
      inq_obj=Inquiry.objects.filter(id=inq_id).first()
-     if request.method == "POST":
+     if request.method == "POST": 
           inq_obj.delete()
           return redirect("int_obj")
      context={"inq_obj":inq_obj}
@@ -305,7 +305,7 @@ def del_inq(request,inq_id):
 
 def del_con(request,c_id):
      con_obj=Contactus.objects.filter(id=c_id).first()
-     if request.method =="POST":
+     if request.method == "POST":
           con_obj.delete()
           return redirect("del_con")
      context={"con_obj":con_obj}

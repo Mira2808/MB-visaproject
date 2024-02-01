@@ -22,7 +22,7 @@
         <td>{{inquiry_details.phoneno}}</td>
         <td>{{inquiry_details.email}}</td>
         <td>{{inquiry_details.message}}</td>
-        <td><button type="button" class="btn btn-danger"><a href="{% url 'del_inq' Inquiry.id %}">Delete</a></button></td>
+        <td><button type="button" class="btn btn-danger"><a href="{% url 'del_inq' inq_obj.id%}">Delete</a></button></td>
       </tr>
       {% endfor %}
       
