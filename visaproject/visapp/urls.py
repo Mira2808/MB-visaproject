@@ -21,8 +21,8 @@ urlpatterns = [
    path('document/', views.document, name="document"),
 
    path('visadviser/vindex',views.vindex,name="vindex"),
-   path('visadviser/registeruser/<str:user_id>/',views.registeruser,name="registeruser"),
-   path('visadviser/v_editprofile',views.v_editprofile,name="v_editprofile"),
+   path('visadviser/registeruser',views.registeruser,name="registeruser"),
+   path('visadviser/v_editprofile/<str:v_id>/',views.v_editprofile,name="v_editprofile"),
    path('visadviser/inquiry',views.inquiry,name="inquiry"),
    path('visadviser/v_contact',views.v_contact,name="v_contact"),
    path('visadviser/v_document/<str:user_id>/',views.v_document,name="v_document"),
@@ -30,7 +30,13 @@ urlpatterns = [
    path('visadviser/del_inq/<str:inq_id>/',views.del_inq,name="del_inq"),
    path('visadviser/del_con/<str:c_id>/',views.del_con,name="del_con"),
 
-   path('main-admin/aindex',views.aindex,name="aindex"), 
-   
+   path('main-admin/aindex',views.aindex,name="aindex"),
+   path('main-admin/v_allocation',views.v_allocation,name="v_allocation"),  
+   path('main-admin/a_registeruser',views.a_registeruser,name="a_registeruser"), 
+   path('main-admin/edituser/<str:user_id>/',views.edituser,name="edituser"),
+   path('main-admin/a_inquiry',views.a_inquiry,name="a_inquiry"), 
+   path('main-admin/a_contact',views.a_contact,name="a_contact"), 
+   path('main-admin/a_del_inq/<str:inq_id>/',views.a_del_inq,name="a_del_inq"),
+   path('main-admin/a_del_con/<str:c_id>/',views.a_del_con,name="a_del_con"),
    
 ]

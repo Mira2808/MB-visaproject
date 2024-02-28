@@ -1,4 +1,4 @@
-{% extends "visadviser/vbase.html" %}
+{% extends "main-admin/abase.html" %}
 {% load static %}
 
 {% block content %}
@@ -13,7 +13,7 @@
           Edit Client Details
         </b> </h2>
       </div>
-            <form action="{{editregisteruser}}" method="POST">
+            <form action="{{edituser}}" method="POST">
               <div class="row">
                 {% csrf_token %}   
                   <div class="col-md-6 mb-3">

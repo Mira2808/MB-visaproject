@@ -1,4 +1,4 @@
-{% extends "visadviser/vbase.html" %}
+{% extends "main-admin/abase.html" %}
 {% load static %}
 
 {% block content %}
@@ -27,10 +27,10 @@
                       </p>
                     </div>
                     <div class="buttons wow fadeInUp">							
-              <a class="btn btn-primary btn-customized-2 scroll-link" href="#section-3" role="button">
+              {% comment %} <a class="btn btn-primary btn-customized-2 scroll-link" href="#section-3" role="button">
                 <i class="fa-solid fa-plus"></i>
                 Edit Profile
-              </a>
+              </a> {% endcomment %}
             </div><br>
                   </div>
               </div>
@@ -51,7 +51,7 @@
                     <div class="row">
                       <div class="col-md-4">
                         <div class="section-1-box-icon">
-                         <a href="{% url 'inquiry'%}"><button type="button" class="btn btn-primary">inquiry Details</button></a>
+                         <a href="{% url 'a_inquiry' %}"><button type="button" class="btn btn-primary">inquiry Details</button></a>
                         </div>
                       </div>
                       <div class="col-md-8">
@@ -64,7 +64,7 @@
                     <div class="row">
                       <div class="col-md-4">
                         <div class="section--box-icon">
-                          <a href="{% url 'v_contact'%}"><button type="button" class="btn btn-primary">Contact Details</button></a>
+                          <a href="{% url 'a_contact' %}"><button type="button" class="btn btn-primary">Contact Details</button></a>
                         </div>
                       </div>
                       <div class="col-md-8">

@@ -16,11 +16,11 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <link rel="stylesheet" href="{% static 'assets/css/jquery.mCustomScrollbar.min.css'%}">
-        <link rel="stylesheet" href="{% static 'assets/css/animate.css'%}">
-        <link rel="stylesheet" href="{% static 'assets/css/style.css'%}">
-        <link rel="stylesheet" href="{% static 'assets/css/media-queries.css'%}">
-		<link rel="stylesheet" href="{% static 'assets/css/new.css'%}">
+        <link rel="stylesheet" href="{% static 'assets/css/jquery.mCustomScrollbar.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/media-queries.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/new.css' %}">
 
         <!-- Favicon and touch icons -->
         <link rel="shortcut icon" href="assets/ico/favicon.png">
@@ -53,21 +53,23 @@
 					<li class="list">
 						<a class="nav-link" href="{% url 'vindex'%}"><i class="fas fa-home"></i><span class="link">Home</span></a>
 					</li>
+					
 					<li class="list">
-						<a class="nav-link" href="{% url 'v_editprofile'%}"><i class="fas fa-user"></i><span class="link">Edit Profile</span> </a>
+						<a class="nav-link" href="{% url 'v_editprofile' obj.id %}"><i class="fas fa-user"></i><span class="link">Edit Profile</span> </a>
 					</li>
+					
 					<li class="list">
-						<a class="nav-link" href="{% url 'registeruser' user.id%}"><i class="fas fa-users"></i> <span class="link">Registerd User</span></a>
+						<a class="nav-link" href="{% url 'registeruser' %}"><i class="fas fa-users"></i> <span class="link">Registerd User</span></a>
 					</li>
 					
 					<li class="list">
 						<a class="nav-link" href="{% url 'v_document' user.id %}"><i class="fa-regular fa-file"></i><span class="link">Documents</span></a>
 					</li>
 					<li class="list">
-						<a class="nav-link" href="{% url 'inquiry' inq_obj.id %}"><i class="fa-solid fa-clipboard-question"></i><span class="link">Inquiry Details</span></a>
+						<a class="nav-link" href="{% url 'inquiry' %}"><i class="fa-solid fa-clipboard-question"></i><span class="link">Inquiry Details</span></a>
 					</li>
 					<li class="list">
-						<a class="nav-link" href="{% url 'v_contact' con_obj.id %}"><i class="fa-solid fa-address-book"></i><span class="link">Contact Details</span></a>
+						<a class="nav-link" href="{% url 'v_contact'%}"><i class="fa-solid fa-address-book"></i><span class="link">Contact Details</span></a>
 					</li><br>
 					<li class="list">
 						<a class="nav-link" href="#"><i class="fa-solid fa-right-from-bracket"></i><span class="link">Log Out</span></a>
@@ -83,15 +85,15 @@
      {% endblock content %}
            <!-- Javascript -->
 		<script src="https://kit.fontawesome.com/17178ec874.js" crossorigin="anonymous"></script>
-		<script src="{% static 'assets/js/jquery-3.3.1.min.js'%}"></script>
-		<script src="{% static 'assets/js/jquery-migrate-3.0.0.min.js'%}"></script>
+		<script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery-migrate-3.0.0.min.js' %}"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="{% static 'assets/js/jquery.backstretch.min.js'%}"></script>
-        <script src="{% static 'assets/js/wow.min.js'%}"></script>
-        <script src="{% static 'assets/js/jquery.waypoints.min.js'%}"></script>
-        <script src="{% static 'assets/js/jquery.mCustomScrollbar.concat.min.js'%}"></script>
-        <script src="{% static 'assets/js/scripts.js'%}"></script>
+        <script src="{% static 'assets/js/jquery.backstretch.min.js' %}"></script>
+        <script src="{% static 'assets/js/wow.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.waypoints.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+        <script src="{% static 'assets/js/scripts.js' %}"></script>
 
     </body>
 

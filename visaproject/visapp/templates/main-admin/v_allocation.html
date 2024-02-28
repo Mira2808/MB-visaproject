@@ -1,4 +1,4 @@
-{% extends "visadviser/vbase.html" %}
+{% extends "main-admin/abase.html" %}
 {% load static %}
 
 {% block content %}
@@ -13,10 +13,13 @@
           Visa-Adviser Allocation
         </b> </h2>
       </div>
-            <form action="{{v_editprofile}}" method="POST">
+            <form action="{{v_allocation}}" method="POST">
               <div class="row">
                 {% csrf_token %}   
-                
+                <div class="col-md-6 mb-3">
+                  <label for="">UserName</label>
+                  <input type="text" name="username" class="form-control" value="">
+              </div>
                   <div class="col-md-6 mb-3">
                       <label for="">First Name</label>
                       <input type="text" name="first_name" class="form-control" value="">
@@ -29,7 +32,10 @@
                       <label for="">Email</label>
                       <input type="text" name="email" class="form-control" value="">
                   </div>
-                 
+                  <div class="col-md-6 mb-3">
+                      <label for="">Password</label>
+                      <input type="password" name="password" class="form-control" value="">
+                  </div>
                   <div class="col-md-6 mb-3">
                     <label for="">phoneno</label>
                     <input type="number" name="phone" class="form-control" value="">

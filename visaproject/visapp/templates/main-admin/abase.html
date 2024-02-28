@@ -10,7 +10,7 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
-        <title>Visa-Adviser</title>  
+        <title>Admin</title>  
 
         <!-- CSS -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
@@ -51,23 +51,20 @@
 				<ul class="list-unstyled menu-elements">
 					<h4><b style="color: rgb(249, 246, 246);">This is Visa-Advicer Side</b></h4>
 					<li class="list">
-						<a class="nav-link" href="#"><i class="fas fa-home"></i><span class="link">Home</span></a>
+						<a class="nav-link" href="{% url 'aindex'%}"><i class="fas fa-home"></i><span class="link">Home</span></a>
 					</li>
 					<li class="list">
-						<a class="nav-link" href="#"><i class="fas fa-user"></i><span class="link">Edit Profile</span> </a>
+						<a class="nav-link" href="{% url 'v_allocation'%}"><i class="fas fa-user"></i><span class="link">Visa-Advicer Allocation</span> </a>
 					</li>
 					<li class="list">
-						<a class="nav-link" href="#"><i class="fas fa-users"></i> <span class="link">Registerd User</span></a>
+						<a class="nav-link" href="{% url 'a_registeruser'%}"><i class="fas fa-users"></i> <span class="link">Registerd User</span></a>
 					</li>
 					
 					<li class="list">
-						<a class="nav-link" href="#"><i class="fa-regular fa-file"></i><span class="link">Documents</span></a>
+						<a class="nav-link" href="{% url 'a_inquiry' %}"><i class="fa-solid fa-clipboard-question"></i><span class="link">Inquiry Details</span></a>
 					</li>
 					<li class="list">
-						<a class="nav-link" href="#"><i class="fa-solid fa-clipboard-question"></i><span class="link">Inquiry Details</span></a>
-					</li>
-					<li class="list">
-						<a class="nav-link" href="#"><i class="fa-solid fa-address-book"></i><span class="link">Contact Details</span></a>
+						<a class="nav-link" href="{% url 'a_contact' %}"><i class="fa-solid fa-address-book"></i><span class="link">Contact Details</span></a>
 					</li><br>
 					<li class="list">
 						<a class="nav-link" href="#"><i class="fa-solid fa-right-from-bracket"></i><span class="link">Log Out</span></a>

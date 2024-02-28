@@ -26,12 +26,10 @@
 
                       </p>
                     </div>
-                    <div class="buttons wow fadeInUp">							
-              <a class="btn btn-primary btn-customized-2 scroll-link" href="#section-3" role="button">
-                <i class="fa-solid fa-plus"></i>
-                Edit Profile
-              </a>
-            </div><br>
+                    <div class="buttons wow fadeInUp">	
+                      
+                      <button type="button" class="btn btn-secondary"><a href="{% url 'v_editprofile' obj.id %}" style="text-decoration: ; color: aliceblue;">Edit Profile</a></button>
+                    
                   </div>
               </div>
           </div>

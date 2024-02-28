@@ -77,18 +77,22 @@ class Service(models.Model):
 
 class Adviserprofile(models.Model):
 
-    """if new flieds need to be added extend null=true and blanl=true"""
+    """if new flieds need to be added extend null=true,blank=true"""
+    username=models.CharField(max_length=50,null=True,blank=True)
+    first_name=models.CharField(max_length=50,null=True,blank=True)
+    last_name=models.CharField(max_length=50,null=True,blank=True)
+    email=models.EmailField(max_length=254,null=True,blank=True,default="mira@gmail.com")
+    password=models.CharField(max_length=50,null=True,blank=True)
     phone = models.BigIntegerField()
     date_of_birth = models.DateField()
     experience=models.FloatField()
     qualification=models.CharField(max_length=50)
-    email=models.EmailField()
-    location=models.CharField(max_length=50)
-    service=models.ForeignKey(Service,on_delete=models.CASCADE)
-    user_model = models.ForeignKey(User, on_delete=models.CASCADE)
+    visatype=models.CharField(max_length=20,choices=VISATYPE,default="student visa")
+    
+    
 
     def __str__(self):
-        return self.email
+        return self.first_name
     
     class Meta:
         verbose_name_plural = "Adviserprofile"

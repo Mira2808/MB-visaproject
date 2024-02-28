@@ -4,13 +4,14 @@
 {% block content %}
 
 
-    <div class="container">
+    <div class="ask" style="margin-top: 200px; color: black; font-weight: bolder;">
         <form action="{{del_inq}}" method="POST">
             {% csrf_token %}
             <h3>Are you sure want to delete?</h3>
             
             <button class="btn btn-danger" type="submit">Yes</button>
-            <button class="btn btn-primary"><a href="{% url 'inquiry' %}" style="color: white">No</button>
+            <button class="btn btn-primary"><a href="{% url 'inquiry' %}" style="color: white">No</
+                a></button>
         </form>
     </div>
 

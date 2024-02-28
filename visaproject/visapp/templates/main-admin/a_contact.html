@@ -1,7 +1,8 @@
-{% extends "visadviser/vbase.html" %}
+{% extends "main-admin/abase.html" %}
 {% load static %}
 
 {% block content %}
+
 <div class="regis-head"><b>Contact Details</b></div>
 <table class="table">
     <thead class="thead-dark">
@@ -24,13 +25,7 @@
         <td>{{contact_details.email}}</td>
         <td>{{contact_details.phoneno}}</td>
         <td>{{contact_details.message}}</td>
-        <td><a href="{% url 'del_con' c<button type="button" class="btn btn-danger">Delete</button>ontact_details.id %}"></a></td>
+        <td><a href="{% url 'a_del_con' contact_details.id %}"><button type="button" class="btn btn-danger">Delete</button></a></td>
       </tr>
       {% endfor %}
-      
-    </tbody>
-  </table>
-  
-  
-
-{% endblock content%}
+{% endblock content %}   

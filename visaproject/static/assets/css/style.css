@@ -489,10 +489,25 @@ footer { padding: 40px 0; }
   color:#040404
   
 }
+.vcontainer{
+	height: 300px;
+	width: 700px;
+	background: transparent;
+	backdrop-filter: blur(20px);
+	margin-top: 70px;
+	margin-left: 300px;
+	color:#040404
+}
 
 .doc-image{
-	background-image: url(F:\Finalproject\visaproject\static\images\visadviser.jpeg);
-	background-repeat: repeat-x;
+	/* background-color: #76b5d2; */
 	border: 2px solid black;
+	margin-top: 50px;
+	margin-bottom: 50px; 
+	margin-left: 100px; 
+    margin-right: 100px;
+}
+.ask{
+	margin-top: 200px;
 }
  
